@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>ambatturvault.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>ambatturvault.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\Murali\KT\ARMS\ARMS\ambatturvault\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/ambatturvault/</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>55DF36298ABBD52C7C4E0ACFB6A5EFCB459B4FEF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ambatturvault_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D793957-3B41-4312-9003-645B9FCA9B31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ambatturvault.My.MyApplication</StartupObject>
+    <RootNamespace>ambatturvault</RootNamespace>
+    <AssemblyName>ambatturvault</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ambatturvault.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ambatturvault.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.ComctlLib">
+      <HintPath>..\..\..\CPM\bin\Debug\AxInterop.ComctlLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.MSFlexGridLib">
+      <HintPath>bin\Debug\AxInterop.MSFlexGridLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel">
+      <HintPath>bin\Debug\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\CPM\bin\Debug\office.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\frmAlmira.Designer.vb">
+      <DependentUpon>frmAlmira.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAlmira.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAlmiraImport.Designer.vb">
+      <DependentUpon>frmAlmiraImport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAlmiraImport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAplobinput.Designer.vb">
+      <DependentUpon>frmAplobinput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAplobinput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAplobInputDelete.Designer.vb">
+      <DependentUpon>frmAplobInputDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAplobInputDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAploboutput.Designer.vb">
+      <DependentUpon>frmAploboutput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAploboutput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBatchChequeDelete.Designer.vb">
+      <DependentUpon>frmBatchChequeDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBatchChequeDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBatchDelete.Designer.vb">
+      <DependentUpon>frmBatchDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBatchDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBatchEntry.Designer.vb">
+      <DependentUpon>frmBatchEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBatchEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBatchTicket.Designer.vb">
+      <DependentUpon>frmBatchTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBatchTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBulkChqUpdate.Designer.vb">
+      <DependentUpon>frmBulkChqUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBulkChqUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChequeDelete.Designer.vb">
+      <DependentUpon>frmChequeDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChequeDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChequeEntry.Designer.vb">
+      <DependentUpon>frmChequeEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChequeEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChequeNoQry.designer.vb">
+      <DependentUpon>frmChequeNoQry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChequeNoQry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChequePaymodeUpdate.Designer.vb">
+      <DependentUpon>frmChequePaymodeUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChequePaymodeUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChequeUpdate.Designer.vb">
+      <DependentUpon>frmChequeUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChequeUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChngPwd.designer.vb">
+      <DependentUpon>frmChngPwd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChngPwd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChqUpload.Designer.vb">
+      <DependentUpon>frmChqUpload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChqUpload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCourier.Designer.vb">
+      <DependentUpon>frmCourier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCourier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCtsCheckList.Designer.vb">
+      <DependentUpon>frmCtsCheckList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCtsCheckList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeleteFile.Designer.vb">
+      <DependentUpon>frmDeleteFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeleteFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiscAdd.Designer.vb">
+      <DependentUpon>frmDiscAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiscAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiscCheckList.Designer.vb">
+      <DependentUpon>frmDiscCheckList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiscCheckList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDispatch.designer.vb">
+      <DependentUpon>frmDispatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDispatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDummyPacketEntry.Designer.vb">
+      <DependentUpon>frmDummyPacketEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDummyPacketEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEntity.Designer.vb">
+      <DependentUpon>frmEntity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEntity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGenerateBatch.Designer.vb">
+      <DependentUpon>frmGenerateBatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGenerateBatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGeneratePresentation.Designer.vb">
+      <DependentUpon>frmGeneratePresentation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGeneratePresentation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHistory.Designer.vb">
+      <DependentUpon>frmHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImageBaseEntry.Designer.vb">
+      <DependentUpon>frmImageBaseEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImageBaseEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImport.Designer.vb">
+      <DependentUpon>frmImport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInward.Designer.vb">
+      <DependentUpon>frmInward.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInward.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLocation.Designer.vb">
+      <DependentUpon>frmLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBank.Designer.vb">
+      <DependentUpon>frmBank.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMicr.Designer.vb">
+      <DependentUpon>frmMicr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMicr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNameMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPacket.Designer.vb">
+      <DependentUpon>frmPacket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPacket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPacketEntry.Designer.vb">
+      <DependentUpon>frmPacketEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPacketEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPostFile.Designer.vb">
+      <DependentUpon>frmPostFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPostFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPouchInwardAuth.Designer.vb">
+      <DependentUpon>frmPouchInwardAuth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPouchInwardAuth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPullout.Designer.vb">
+      <DependentUpon>frmPullout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPullout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPulloutDelete.Designer.vb">
+      <DependentUpon>frmPulloutDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPulloutDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPulloutreason.Designer.vb">
+      <DependentUpon>frmPulloutreason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPulloutreason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPulloutStatusUpdate.designer.vb">
+      <DependentUpon>frmPulloutStatusUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPulloutStatusUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQuickView.Designer.vb">
+      <DependentUpon>frmQuickView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQuickView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRights.designer.vb">
+      <DependentUpon>frmRights.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRights.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRplobDelete.Designer.vb">
+      <DependentUpon>frmRplobDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRplobDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRplobNew.Designer.vb">
+      <DependentUpon>frmRplobNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRplobNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmScanAuditQueue.Designer.vb">
+      <DependentUpon>frmScanAuditQueue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmScanAuditQueue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSearch.Designer.vb">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUndoChqdesc.Designer.vb">
+      <DependentUpon>frmUndoChqdesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUndoChqdesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUndoFile.Designer.vb">
+      <DependentUpon>frmUndoFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUndoFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserAuth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserSetPwd.designer.vb">
+      <DependentUpon>frmUserSetPwd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserSetPwd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmView.designer.vb">
+      <DependentUpon>frmView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\ScanEntryModel.vb" />
+    <Compile Include="Reports\frmChequeReport.Designer.vb">
+      <DependentUpon>frmChequeReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmChequeReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmConsolidatedReport.Designer.vb">
+      <DependentUpon>frmConsolidatedReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmConsolidatedReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEntityReport.Designer.vb">
+      <DependentUpon>frmEntityReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEntityReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmHistoryReport.Designer.vb">
+      <DependentUpon>frmHistoryReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmHistoryReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmImageViewer.Designer.vb">
+      <DependentUpon>frmImageViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmImageViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmMicrReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmPacketReport.Designer.vb">
+      <DependentUpon>frmPacketReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmPacketReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmScanImageDownloadReport.Designer.vb">
+      <DependentUpon>frmScanImageDownloadReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmScanImageDownloadReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmScanReport.Designer.vb">
+      <DependentUpon>frmScanReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmScanReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmSearchEngineReport.Designer.vb">
+      <DependentUpon>frmSearchEngineReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmSearchEngineReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmSearchReport.Designer.vb">
+      <DependentUpon>frmSearchReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmSearchReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmUserAuthReport.designer.vb">
+      <DependentUpon>frmUserAuthReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmUserAuthReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\clsImport.vb" />
+    <Compile Include="Module\GlobalODBC.vb" />
+    <Compile Include="Module\modFuntion.vb" />
+    <Compile Include="Module\objExcel.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\frmAplobInputReport.Designer.vb">
+      <DependentUpon>frmAplobInputReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmAplobInputReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmBatchReport.Designer.vb">
+      <DependentUpon>frmBatchReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmBatchReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmErrLineReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmFeatureRplobReport.Designer.vb">
+      <DependentUpon>frmFeatureRplobReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmFeatureRplobReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmFileReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmInwardReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmPulloutReport.Designer.vb">
+      <DependentUpon>frmPulloutReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmPulloutReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmQryReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmRplobReport.Designer.vb">
+      <DependentUpon>frmRplobReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmRplobReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmUserManagementReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmAlmira.resx">
+      <DependentUpon>frmAlmira.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAlmiraImport.resx">
+      <DependentUpon>frmAlmiraImport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAplobinput.resx">
+      <DependentUpon>frmAplobinput.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAplobInputDelete.resx">
+      <DependentUpon>frmAplobInputDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAploboutput.resx">
+      <DependentUpon>frmAploboutput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBatchChequeDelete.resx">
+      <DependentUpon>frmBatchChequeDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBatchDelete.resx">
+      <DependentUpon>frmBatchDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBatchEntry.resx">
+      <DependentUpon>frmBatchEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBatchTicket.resx">
+      <DependentUpon>frmBatchTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBulkChqUpdate.resx">
+      <DependentUpon>frmBulkChqUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChequeDelete.resx">
+      <DependentUpon>frmChequeDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChequeEntry.resx">
+      <DependentUpon>frmChequeEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChequeNoQry.resx">
+      <DependentUpon>frmChequeNoQry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChequePaymodeUpdate.resx">
+      <DependentUpon>frmChequePaymodeUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChequeUpdate.resx">
+      <DependentUpon>frmChequeUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChngPwd.resx">
+      <DependentUpon>frmChngPwd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCourier.resx">
+      <DependentUpon>frmCourier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeleteFile.resx">
+      <DependentUpon>frmDeleteFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDispatch.resx">
+      <DependentUpon>frmDispatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDummyPacketEntry.resx">
+      <DependentUpon>frmDummyPacketEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEntity.resx">
+      <DependentUpon>frmEntity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGenerateBatch.resx">
+      <DependentUpon>frmGenerateBatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGeneratePresentation.resx">
+      <DependentUpon>frmGeneratePresentation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHistory.resx">
+      <DependentUpon>frmHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImageBaseEntry.resx">
+      <DependentUpon>frmImageBaseEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInward.resx">
+      <DependentUpon>frmInward.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLocation.resx">
+      <DependentUpon>frmLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBank.resx">
+      <DependentUpon>frmBank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMicr.resx">
+      <DependentUpon>frmMicr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNameMaster.resx">
+      <DependentUpon>frmNameMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPacket.resx">
+      <DependentUpon>frmPacket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPacketEntry.resx">
+      <DependentUpon>frmPacketEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPostFile.resx">
+      <DependentUpon>frmPostFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPouchInwardAuth.resx">
+      <DependentUpon>frmPouchInwardAuth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPullout.resx">
+      <DependentUpon>frmPullout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPulloutDelete.resx">
+      <DependentUpon>frmPulloutDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPulloutreason.resx">
+      <DependentUpon>frmPulloutreason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPulloutStatusUpdate.resx">
+      <DependentUpon>frmPulloutStatusUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRights.resx">
+      <DependentUpon>frmRights.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRplobDelete.resx">
+      <DependentUpon>frmRplobDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRplobNew.resx">
+      <DependentUpon>frmRplobNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmScanAuditQueue.resx">
+      <DependentUpon>frmScanAuditQueue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSearch.resx">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUndoFile.resx">
+      <DependentUpon>frmUndoFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserAuth.resx">
+      <DependentUpon>frmUserAuth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserMaster.resx">
+      <DependentUpon>frmUserMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserSetPwd.resx">
+      <DependentUpon>frmUserSetPwd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmView.resx">
+      <DependentUpon>frmView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmAplobInputReport.resx">
+      <DependentUpon>frmAplobInputReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmBatchReport.resx">
+      <DependentUpon>frmBatchReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmChequeReport.resx">
+      <DependentUpon>frmChequeReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmConsolidatedReport.resx">
+      <DependentUpon>frmConsolidatedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEntityReport.resx">
+      <DependentUpon>frmEntityReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmErrLineReport.resx">
+      <DependentUpon>frmErrLineReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmFeatureRplobReport.resx">
+      <DependentUpon>frmFeatureRplobReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmFileReport.resx">
+      <DependentUpon>frmFileReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmHistoryReport.resx">
+      <DependentUpon>frmHistoryReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmImageViewer.resx">
+      <DependentUpon>frmImageViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmInwardReport.resx">
+      <DependentUpon>frmInwardReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmMicrReport.resx">
+      <DependentUpon>frmMicrReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmPacketReport.resx">
+      <DependentUpon>frmPacketReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmPulloutReport.resx">
+      <DependentUpon>frmPulloutReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmQryReport.resx">
+      <DependentUpon>frmQryReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmRplobReport.resx">
+      <DependentUpon>frmRplobReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmScanImageDownloadReport.resx">
+      <DependentUpon>frmScanImageDownloadReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmScanReport.resx">
+      <DependentUpon>frmScanReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmSearchEngineReport.resx">
+      <DependentUpon>frmSearchEngineReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmSearchReport.resx">
+      <DependentUpon>frmSearchReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmUserAuthReport.resx">
+      <DependentUpon>frmUserAuthReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmUserManagementReport.resx">
+      <DependentUpon>frmUserManagementReport.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ambatturvault_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSFlexGridLib">
+      <Guid>{5E9E78A0-531B-11CF-91F6-C2863C385E30}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
